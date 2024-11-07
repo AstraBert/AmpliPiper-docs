@@ -17,10 +17,16 @@ All notable user-facing changes to this project are documented in this file.
 
 ---
 
-## v0.1.0-beta
+## v.0.2.0-beta
 
-{: .warning }
+{: .note }
 > Pre-release
+
+This our first public beta v. 0.2.0
+
+**Full Changelog**: https://github.com/nhmvienna/AmpliPiper/commits/v.0.2.0
+
+## v0.1.0-beta
 
 This is the first beta version of the AmpliPiper analysis pipeline. Please report any problems and errors.
 

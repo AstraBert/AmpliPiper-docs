@@ -20,9 +20,9 @@ Here you will find all the useful metadata about people and dependencies linked 
 
 ## Developers 
 
-* [Martin Kapun](https://github.com/capoony), NHM Wien
-* [Sonja Steindl](https://github.com/sonjastndl), NHM Wien
-* [Astra Bertelli](https://astrabert.vercel.app), University of Pavia
+* [Martin Kapun](https://github.com/capoony): NHM Wien
+* [Sonja Steindl](https://github.com/sonjastndl): NHM Wien
+* [Astra Bertelli](https://astrabert.vercel.app): NHM Wien, University of Pavia
 
 ## Contributors
 
@@ -30,7 +30,7 @@ Here you will find all the useful metadata about people and dependencies linked 
 * [Sandra Kirchner](https://www.nhm-wien.ac.at/en/sandra_kirchner)
 * [Nikolaus Szucsich](https://www.nhm-wien.ac.at/en/nikolaus_szucsich)
 * [Elisabeth Haring](https://www.nhm-wien.ac.at/en/elisabeth_haring)
-* [Stefan Eichert](https://github.com/stefaneichert)
+* [Paula Schwahofer](https://www.researchgate.net/profile/Paula-Schwahofer)
 
 If you feel like your contribution was important in building the project and we forgot to mention you, just contact us and we'll integrate your name in this page!
 
@@ -38,7 +38,6 @@ If you feel like your contribution was important in building the project and we 
 
 **Software**
 
-* **NanoFilt**: De Coster, W., D'Hert, S., Schultz, D. T., Cruts, M., & Van Broeckhoven, C. (2018). NanoPack: visualizing and processing long-read sequencing data. Bioinformatics, 34(11), 1933-1934. doi: 10.1093/bioinformatics/bty102
 * **NanoCaller**: Ahsan, M.U., Liu, Q., Fang, L. et al. NanoCaller for accurate detection of SNPs and indels in difficult-to-map regions from long-read sequencing by haplotype-aware deep neural networks. Genome Biol 22, 261 (2021). https://doi.org/10.1186/s13059-021-02472-2.
 * **Pigz**: Adler, M., https://github.com/madler/pigz
 * **Samtools**: Li, H., Handsaker, B., Wysoker, A., Fennell, T., Ruan, J., Homer, N.,... & 1000 Genome Project Data Processing Subgroup. (2009). The Sequence Alignment/Map format and SAMtools. Bioinformatics, 25(16), 2078-2079. doi: 10.1093/bioinformatics/btp352

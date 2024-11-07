@@ -44,23 +44,23 @@ This will create several conda environments in a subdirectory named `envs`. The 
 
 ## Dependencies
 
+nanofilt, python_dependencies, parallel, ASAP, astral, B
+
 These are the conda environments that will be created:
 
 ```
 envs/
-├── R
 ├── asap
 ├── astral
-├── bcftools
 ├── blast
 ├── iqtree
+├── logs
 ├── mafft
-├── minimap
 ├── nanofilt
 ├── parallel
 ├── pigz
 ├── python_dependencies
-└── samtools
+└── R
 ```
 
 Here is the breakdown of the dependencies that are contained within these environemnts:
@@ -73,47 +73,38 @@ Here is the breakdown of the dependencies that are contained within these enviro
 
 * Dependencies: `pigz`
 
-#### 3. Samtools
 
-* Dependencies: `samtools=1.17`
-
-#### 4. Minimap
-
-* Dependencies: `minimap2=2.26`, `samtools=1.17`
-
-#### 5. BCFtools
-
-* Dependencies: `bcftools`
-
-#### 6. Python Dependencies
-
-* Dependencies: `python=3.10`, `pandas`, `matplotlib`, `biopython`, `edlib`, `cairosvg`, `pymsaviz`, `ete3`, `pandas=2.1.1`, `beautifulsoup4`, `scipy`
-
-#### 7. MAFFT
-
-* Dependencies: `mafft=7.520`
-
-#### 8. IQtree
-
-* Dependencies: `iqtree=2.2.5`
-
-#### 9. R
-
-* Dependencies: `r-base=4.1.3`, `bioconductor-ggtree`, `r-tidyverse`, `bioconductor-treeio`, `r-phytools`, `r-ape`, `r-treedist`, `r-reshape2`
-
-#### 10. Astral
-
-* Dependencies: `astral-tree=5.7.8`
-
-#### 11. ASAP
-
-* Dependencies: `asap-v0.1.2-h14c3975_0`
-
-#### 12. GNU Parallel
+#### 3. GNU Parallel
 
 * Dependencies: `parallel`
 
-#### 13. BLAST
+#### 4. Python Dependencies
+
+* Dependencies: `python=3.10`, `matplotlib`, `biopython`, `edlib`, `cairosvg`, `pymsaviz`, `ete3`, `beautifulsoup4`, `scipy`, `scikit-learn`
+
+#### 5. MAFFT
+
+* Dependencies: `mafft=7.520`
+
+#### 6. IQtree
+
+* Dependencies: `iqtree=2.2.5`
+
+#### 7. R
+
+* Dependencies: `r-base=4.1.3`, `bioconductor-ggtree`, `r-tidyverse`, `bioconductor-treeio`, `r-phytools`, `r-ape`, `r-treedist`, `r-reshape2`, `r-seqinr`, `r-gridextra`, `r-stringr`
+
+
+#### 8. Astral
+
+* Dependencies: `astral-tree=5.7.8`
+
+#### 9. ASAP
+
+* Dependencies: `asap-v0.1.2-h14c3975_0`
+
+
+#### 10. BLAST
 
 * Dependencies: `blast`
 

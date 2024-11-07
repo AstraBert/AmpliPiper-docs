@@ -39,7 +39,11 @@ From the raw outputs by AmpliconSorter, the most supported consensus sequences (
 Amplicon Sorter outputs are summarized into a csv file, which will be employed for haplotype reconstruction.
 
 ## Haplotype reconstruction
-Ploidy-based haplotype reconstruction is achieved with the help of the custom Python script ChooseConsensus.py, which tests the consistency of various ploidy assets within the reads (based on SNPs) and outputs the consensus sequences to be kept for downstream analysis, labeling them as haplotypes (with _1, _2, _3... as a series number in their header).
+Ploidy-based haplotype reconstruction is achieved with the help of the custom Python script ChooseConsensus.py, which tests the consistency of various ploidy assets within the reads (based on maximum likelihood statistical tests) and outputs the consensus sequences to be kept for downstream analysis, labeling them as haplotypes (with _1, _2, _3... as a series number in their header).
+
+## Genetic distance calculation
+
+The genetic distance across samples is calculated for each locus separately using the R script GenDist.r
 
 ## Phylogenetic analysis
 Phylogenetic analysis begins with haplotypes alignment, accomplished by MAFFT. Not only are haplotypes aligned, but their resulting alignments are merged by a custom python script into a concatenated dataset: this will serve for further phylogenetic analyses and, especially, for species delimitation.
@@ -54,10 +58,14 @@ There is also the possibility to enable IQtree partition model when performing t
 Species delimitation relies on ASAP, which identifies the best partitioning model for the haplotypes and for the concatenated dataset, delimiting putative species groups.
 
 ## Species Identification
+
+{: .warning }
+> On 7th November 2024 BOLD upgraded from v4 to v5, causing a dismission of the old API service. The API services are currently migrating, thus they are not available at the moment. If you want to perform species idenfication, we suggest you use BLAST with the `--blast` flag. 
+
 Species identification is achieved through two API services:
 
-* **BOLD API**: Based on a set of custom Python scripts, this API interface queries the BOLD database, but only for three loci: COX1, ITS, and MATK_RBCL (these must be explicitly specified as primer IDs in the primers csv). This process is generally slow (due to a self-imposed restriction to a maximum of 4 concurrent submissions to avoid overusing the API), but faster than BLAST. Moreover, being a curated database, BOLD's results are more reliable than BLAST's.
-* **BLAST API**: Based on a custom script and provided by NCBI through Biopython, due to the request restriction policy by NCBI itself, the API is really slow in retrieving results, especially if there is a high number of query sequences (> 50). This species identification option is generally disabled.
+* **BOLD API**: Based on a set of custom Python scripts, this API interface queries the BOLD database, but only for three loci: COX1, ITS, and MATK_RBCL (these must be explicitly specified as primer IDs in the primers csv). Being a curated database, BOLD's results are more reliable than BLAST's.
+* **BLAST API**: Based on a custom script and provided by NCBI through Biopython. It only for three loci: COX1, ITS, and MATK_RBCL (these must be explicitly specified as primer IDs in the primers csv).
 
 ## HTML Summarization
 All the results are summarized in an HTML file by a custom Python script, making it easier to visualize the massive pipeline throughput.

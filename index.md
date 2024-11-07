@@ -2,14 +2,14 @@
 layout: default
 title: Home
 nav_order: 1
-description: "AMPLIPIPER is a comprehensive yet modular pipeline that is able to perform a wide variety of downstream tasks on raw, basecalled, Oxford Nanopore long reads."
+description: "AmpliPiper is a comprehensive modular pipeline that is able to perform a wide variety of downstream tasks on raw, basecalled, Oxford Nanopore long reads."
 permalink: /
 ---
 
-# AMPLIPIPER
+# AmpliPiper
 {: .fs-9 }
 
-AMPLIPIPER is a comprehensive yet modular pipeline that is able to perform a wide variety of downstream tasks on raw, basecalled, Oxford Nanopore long reads.
+AmpliPiper is a comprehensive yet modular pipeline that is able to perform a wide variety of downstream tasks on raw, basecalled, Oxford Nanopore long reads.
 {: .fs-6 .fw-300 }
 
 [Get started now](#quickstart){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
@@ -20,7 +20,7 @@ AMPLIPIPER is a comprehensive yet modular pipeline that is able to perform a wid
 <div align="center">
     <img src="https://img.shields.io/badge/Language-Bash-Green" alt="Static Badge">
    <img src="https://img.shields.io/badge/Production_status-Beta-green" alt="Static Badge">
-   <img src="https://img.shields.io/badge/Release-v0.1.0_beta-purple" alt="Static Badge">
+   <img src="https://img.shields.io/badge/Release-v0.2.0_beta-purple" alt="Static Badge">
    <img src="https://img.shields.io/badge/Requires-Mamba_and_Conda-red" alt="Static Badge">
    <img src="https://img.shields.io/badge/Supported_platforms-linux/macOS-brown" alt="Static Badge">
    <div>
@@ -37,9 +37,9 @@ AMPLIPIPER is a comprehensive yet modular pipeline that is able to perform a wid
 ---
 
 {: .warning }
-> This website documents the features of the current release (v0.1.0-beta) of AMPLIPIPER. See [the CHANGELOG]({% link CHANGELOG.md %}) for a list of releases, new features, and bug fixes.
+> This website documents the features of the current release (v0.2.0-beta) of AmpliPiper. See [the CHANGELOG]({% link CHANGELOG.md %}) for a list of releases, new features, and bug fixes.
 
-**AMPLIPIPER** is a pipeline developed by the Naturhistorisches Museum Wien to tackle most of the challenges posed by amplicon sequencing, and its ultimate goal is to provide the user with a comprehensive tool that is able to automatically perform the following tasks in a single run:
+**AmpliPiper** is a pipeline developed by the Naturhistorisches Museum Wien to tackle most of the challenges posed by amplicon sequencing, and its ultimate goal is to provide the user with a comprehensive tool that is able to automatically perform the following tasks in a single run:
 
 * Quality filtering and size selection
 * Demultiplexing
@@ -57,7 +57,14 @@ Browse the documentation to learn more about how to use this pipeline!
 
 Here you'll get a quick tour of the pipeline:
 
-* **Installation**: To install the pipeline you should have mamba and conda up and running on your machine. Once you are all set, clone [the GitHub repository](https://github.com/nhmvienna/AmpliPiper), go inside of it and run:
+* **Installation**: To install the pipeline you should have mamba and conda up and running on your machine. Once you are all set, clone [the GitHub repository](https://github.com/nhmvienna/AmpliPiper):
+
+```bash
+git clone https://github.com/nhmvienna/AmpliPiper
+cd AmpliPiper
+```
+
+Then run:
 
 ```bash
 bash shell/setup.sh
@@ -69,25 +76,29 @@ bash shell/setup.sh
 bash shell/AmpliPiper.sh -h
 ```
 
-* **Your first usage**: Now that you had a rapid tour of the pipeline's usage, get ready for the first trial. You should collect the names and the paths of your fastq data in a csv file named `samples.csv` and the primers (forward and reverse, with their ids, the ploidy of the locus and the expected length of the sequence) in another csv file, named `primers.csv`. You can then run:
+* **Your first usage**: Now that you had a rapid tour of the pipeline's usage, get ready for the first trial. You can use the test data that our repository offers, just make sure to **replace `<path_to>` with the actual path to your files**. You can then run:
 
 ```bash
-bash /example_absolute_path/AmpliPiper/shell/AmpliPiper.sh \
-    -s /example_absolute_path/test/data/samples.csv \
-    -p /example_absolute_path/test/data/primers.csv \
-    -o /example_absolute_path/test/results/testresults \
-    -q 2 \
-    -n 500 \
-    -t 10 \
-    -f \
-    -r 250 \
-    -m 100 \
-    -k 0.08
+bash <path_to>/shell/AmpliPiper.sh \
+    --samples <path_to>/testdata/data/samples.csv \
+    --primers <path_to/testdata/data/primers.csv \
+    --output <path_to>/testdata/results/demo \
+    --quality 10 \
+    --nreads 1000 \
+    --blast your@email.com \
+    --similar_consensus 97 \
+    --threads 200 \
+    --kthreshold 0.05 \
+    --minreads 50 \
+    --sizerange 100 \
+    --outgroup He_mor_41 \
+    --force
 ```
-* **Read your results**: This previous command will generate all the outputs in the `testresults` folder: to see a summary of them, run:
+
+* **Read your results**: This previous command will generate all the outputs in the `results/demo` folder: to see a summary of them, run:
 
 ```bash
-firefox /example_absolute_path/test/results/testresults/results.html
+firefox <path_to>/testdata/results/demo/results.html
 ```
 
 {: .note }
@@ -97,7 +108,7 @@ See the repository [README][Pipeline README] for a more detailed quickstart.
 
 ### Contributors
 
-**AMPLIPIPER** is developed, distributed and maintained by Martin Kapun (NHM), Sonja Steindl (NHM) and Astra Bertelli (University of Pavia).
+**AmpliPiper** is developed, distributed and maintained by Martin Kapun (NHMW), Sonja Steindl (NHMW) and Astra Clelia Bertelli (NHMW, University of Pavia).
 
 ### Acknowledgments
 
@@ -110,7 +121,7 @@ This project is being developed as part of [TETTRIs - Task 6.2, WP6](https://tet
 
 ### License
 
-**AMPLIPIPER** is [an open source project](https://github.com/nhmvienna/HAPLOTYES/blob/main/LICENSE).
+**AmpliPiper** is [an open source project](https://github.com/nhmvienna/HAPLOTYES/blob/main/LICENSE) distributed under GPL-3.
 
 ### Contributing
 
