@@ -18,9 +18,6 @@ nav_order: 5
 
 ---
 
-{: .warning }
-> SECTION NOT COMPLETED!
-
 
 ## What to expect
 
@@ -28,6 +25,14 @@ After you run the pipeline, the output folder you chose at the beginning should 
 
 ```
 .
+├── Output
+│   ├── SpeciesDelim
+│   ├── SpeciesID
+│   ├── astraltree
+│   ├── haplotypes
+│   ├── results.html
+│   ├── summary
+│   └── tree
 ├── data
 │   ├── demultiplexed
 │   ├── filtered
@@ -39,8 +44,7 @@ After you run the pipeline, the output folder you chose at the beginning should 
 │   ├── demulti
 │   ├── html
 │   ├── summary
-│   ├── tree
-│   └── variantcalling
+│   └── tree
 ├── results
 │   ├── SpeciesDelim
 │   ├── SpeciesID
@@ -49,8 +53,7 @@ After you run the pipeline, the output folder you chose at the beginning should 
 │   ├── haplotypes
 │   ├── html
 │   ├── summary
-│   ├── tree
-|   └── results.html
+│   └── tree
 └── shell
     ├── demult1
     └── demult2
@@ -81,16 +84,21 @@ This subfolder contains:
 * **SpeciesDelim**: in this sub-subfolder, we can find the species delimitation outputs by ASAP for each locus and for Astral-concatenated loci. Here, there are partition-based representations, distance-based histograms and cumulative distributions, and text-based reports.
 * **SpeciesID**: in this sub-subfolder, we can find the species identification outputs divided according to the database from which they were obtained and subdivided among the loci. For what concerns BOLD outputs, we'll have to pay attention to the _final.csv_ output, which summarizes the overall species identification results.
 * **html**: in this sub-subfolder, we can find the html file to ease access to MSA visualization images.
-* **results.html**: more about this file in the [Visualization](#visualization) section.
 
 ### `log` subfolder
 
 This subfolder contains all the logs for the processes executed throughout the pipeline. It is advised that, if there is any problem with the pipeline, you trace it back here before reporting it, if possible.
 
+### `Output` subfolder
+
+This subfolder contains all the information for results visualization (with `results.html`)
+
 ## Visualization
 
-The pipeline produces a `results.html` file to facilitate the visualization of the large amount of data output by the pipeline. Note that there are some compatibility issues with Chrome, so it is recommended to access it through other browsers, such as Firefox:
+The pipeline produces a `results.html` file to facilitate the visualization of the large amount of data output by the pipeline. Note that there are some compatibility issues with non-Linux browsers, so it is advised to open the file within a Linux terminal:
 
 ```bash
+cd Output
 firefox results.html
+google-chrome --disable-gpu results.html
 ```

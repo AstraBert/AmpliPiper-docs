@@ -19,10 +19,11 @@ AmpliPiper is a comprehensive yet modular pipeline that is able to perform a wid
 
 <div align="center">
     <img src="https://img.shields.io/badge/Language-Bash-Green" alt="Static Badge">
-   <img src="https://img.shields.io/badge/Production_status-Beta-green" alt="Static Badge">
-   <img src="https://img.shields.io/badge/Release-v0.2.0_beta-purple" alt="Static Badge">
-   <img src="https://img.shields.io/badge/Requires-Mamba_and_Conda-red" alt="Static Badge">
-   <img src="https://img.shields.io/badge/Supported_platforms-linux/macOS-brown" alt="Static Badge">
+    <img src="https://img.shields.io/badge/Production_status-Beta-green" alt="Static Badge">
+    <img src="https://img.shields.io/badge/Release-v0.2.0_beta-purple" alt="Static Badge">
+    <img src="https://img.shields.io/badge/Requires-Mamba_and_Conda-red" alt="Static Badge">
+    <img src="https://img.shields.io/badge/Supported_platforms-linux/macOS-brown" alt="Static Badge">
+    <img src="https://github.com/AstraBert/amplipiper/actions/workflows/docker-publish.yml/badge.svg" alt="Docker image">
    <div>
         <a href="https://github.com/nhmvienna/AmpliPiper"><img src="./assets/images/AmpliPiper_logo.png" alt="AmpliPiper Logo" align="center"></a>
    </div>

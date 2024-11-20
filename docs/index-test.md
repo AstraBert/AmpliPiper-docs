@@ -80,10 +80,11 @@ There is no need for the sample names to match the basenames of the fastq files.
 * `-r` or `--sizerange`: Define the allowed size buffer in basepairs around the expected locus length (default: 100).
 * `-t` or `--threads`: Specify the number of threads to be used for parallel processing (default: 10).
 * `-w` or `--nowatermark`: Remove the watermark from the phylogenetic tree images (default: disabled).
+* `-y` or `--freqthreshold`: Retain consensus sequences for further analyses which are supported by raw reads, whose frequency in the total pool of reads is larger or equal to this threshold (default: 0.1).
 
 #### Example command
 
-:warning: In the following command, make sure to **replace `<path_to>` with the actual path to your files** :warning:
+⚠️ In the following command, make sure to **replace `<path_to>` with the actual path to your files** ⚠️
 
 ```bash
 bash <path_to>/shell/AmpliPiper.sh \
