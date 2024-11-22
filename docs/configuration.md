@@ -56,7 +56,7 @@ envs/
 ├── iqtree
 ├── logs
 ├── mafft
-├── nanofilt
+├── chopper
 ├── parallel
 ├── pigz
 ├── python_dependencies
@@ -65,9 +65,9 @@ envs/
 
 Here is the breakdown of the dependencies that are contained within these environemnts:
 
-#### 1. Nanofilt
+#### 1. Chopper
 
-* Dependencies: `nanofilt`, `pigz`
+* Dependencies: `chopper`, `pigz`
 
 #### 2. Pigz
 

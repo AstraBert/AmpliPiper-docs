@@ -20,7 +20,7 @@ nav_order: 4
 The preprocessing step consists of two independent parts:
 
 * **Primers comparison**: primers are aligned, and their relative edit distance is calculated and represented as a heatmap. This serves as an informative step for the user, allowing them to adjust the k-threshold parameter based on the primers' distance.
-* **Quality filtering**: accomplished using NanoFilt, this step excludes reads that fall below the minimum quality threshold (set by passing the `--quality` option).
+* **Quality filtering**: accomplished using Chopper, this step excludes reads that fall below the minimum quality threshold (set by passing the `--quality` option).
 
 ## Demultiplexing
 Demultiplexing is a complex and delicate task for the pipeline, accomplished by a custom Python script, and is highly dependent on the parameters (especially k-threshold and size range) provided to the pipeline:
